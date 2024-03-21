@@ -40,12 +40,12 @@ test('GET /movies/:id con id incorrecto debe retornar 404 ', async () => {
 
 test('PUT /movies/:id debe actualizar la pelicula por su id', async () => {
     const body = {
-        firstName:"Godzilla vs Kong"
+        name:"Godzilla vs Kong"
     };
     const res = await request(app).put(`/movies/${id}`).send(body);
     expect(res.status).toBe(200);
     expect(res.body).toBeDefined();
-    expect(res.body.firstName).toBe(body.firstName);
+    expect(res.body.name).toBe(body.name);
 });
 
 test('PUT /movies/:id con id incorrecto debe retornar 404 ', async () => {

@@ -22,7 +22,7 @@ test('POST / debe crear un director de pelicula', async () => {
     id = res.body.id;
     expect(res.status).toBe(201);
     expect(res.body.id).toBeDefined();
-    expect(res.body.name).toBe(body.name);
+    expect(res.body.firstNamename).toBe(body.firstName);
 
 });
 
